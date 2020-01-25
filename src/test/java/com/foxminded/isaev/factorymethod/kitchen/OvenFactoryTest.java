@@ -9,18 +9,18 @@ import com.foxminded.isaev.factorymethod.dishes.CuisineType;
 import com.foxminded.isaev.factorymethod.dishes.Spaghetti;
 import com.foxminded.isaev.factorymethod.dishes.Sushi;
 
-class OvenTest {
+class OvenFactoryTest {
 
     @Test
     void shouldCreateNationalDishes() {
 
-        var ukranianDish = Oven.createDish(CuisineType.UKRANIAN, 1.5D);
+        var ukranianDish = OvenFactory.createDish(CuisineType.UKRANIAN, 1.5D);
         assertEquals(Borscht.class, ukranianDish.getClass());
 
-        var italianDish = Oven.createDish(CuisineType.ITALIAN, 1.5D);
+        var italianDish = OvenFactory.createDish(CuisineType.ITALIAN, 1.5D);
         assertEquals(Spaghetti.class, italianDish.getClass());
 
-        var japaneseDish = Oven.createDish(CuisineType.JAPANESE, 1.5D);
+        var japaneseDish = OvenFactory.createDish(CuisineType.JAPANESE, 1.5D);
         assertEquals(Sushi.class, japaneseDish.getClass());
 
     }

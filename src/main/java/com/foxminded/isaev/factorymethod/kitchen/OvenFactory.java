@@ -6,7 +6,7 @@ import com.foxminded.isaev.factorymethod.dishes.Dish;
 import com.foxminded.isaev.factorymethod.dishes.Spaghetti;
 import com.foxminded.isaev.factorymethod.dishes.Sushi;
 
-public class Oven {
+public class OvenFactory {
 
     public static Dish createDish(CuisineType cuisineType, double busyRate) {
 
