@@ -6,7 +6,7 @@ public class Vehicle implements VehiclePrototype {
     private String color;
     private String number;
 
-    public Vehicle(VehicleType type, String color, String number) {
+    protected Vehicle(VehicleType type, String color, String number) {
         this.type = type;
         this.color = color;
         this.number = number;
