@@ -19,26 +19,26 @@ public class Node implements CalculableElement {
     }
 
     public int increment() {
-        return ++ this.value + calculateOperationOnChildElements(CalculableElement::increment);
+        return ++this.value + calculateOperationOnChildElements(CalculableElement::increment);
     }
 
     public int decrement() {
-        return -- this.value + calculateOperationOnChildElements(CalculableElement::decrement);
+        return --this.value + calculateOperationOnChildElements(CalculableElement::decrement);
     }
 
-    private int calculateOperationOnChildElements(ToIntFunction<CalculableElement> mapper){
+    private int calculateOperationOnChildElements(ToIntFunction<CalculableElement> mapper) {
         int result = this.childElements.stream()
                 .collect(Collectors.summingInt(mapper));
         return result;
     }
 
-    public Leaf addLeaf(int initialValue){
+    public Leaf addLeaf(int initialValue) {
         var newLeaf = new Leaf(initialValue);
         this.childElements.add(newLeaf);
         return newLeaf;
     }
 
-    public Node addNode(int initialValue){
+    public Node addNode(int initialValue) {
         var newNode = new Node(initialValue);
         this.childElements.add(newNode);
         return newNode;

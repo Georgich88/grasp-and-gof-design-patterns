@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class NodeTest {
 
     @Test
-    public void shouldIncrement(){
+    public void shouldIncrement() {
         var node = new Node(1);
         node.addLeaf(2);
         node.addNode(3)
@@ -17,7 +17,7 @@ public class NodeTest {
     }
 
     @Test
-    public void shouldDecrement(){
+    public void shouldDecrement() {
         var node = new Node(1);
         node.addLeaf(2);
         node.addNode(3)
@@ -27,11 +27,27 @@ public class NodeTest {
     }
 
     @Test
-    public void  shouldCalculateSum(){
+    public void shouldCalculateSum() {
         var node = new Node(5);
         node.addLeaf(5);
-        assertEquals(10, node.getValue());
+        assertEquals(10, node.sum());
     }
 
+    @Test
+    public void shouldRemoveChild() {
+        var node = new Node(5);
+        var leaf = node.addLeaf(5);
+        assertEquals(10, node.sum());
+        node.remove(leaf);
+        assertEquals(5, node.sum());
+    }
+
+    @Test
+    public void shouldChangeNodeValue() {
+        var node = new Node(5);
+        assertEquals(5, node.getValue());
+        node.setValue(10);
+        assertEquals(10, node.getValue());
+    }
 
 }
