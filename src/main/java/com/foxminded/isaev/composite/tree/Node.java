@@ -19,11 +19,13 @@ public class Node implements CalculableElement {
     }
 
     public int increment() {
-        return ++this.value + calculateOperationOnChildElements(CalculableElement::increment);
+        this.value++;
+        return this.value + calculateOperationOnChildElements(CalculableElement::increment);
     }
 
     public int decrement() {
-        return --this.value + calculateOperationOnChildElements(CalculableElement::decrement);
+        this.value--;
+        return this.value + calculateOperationOnChildElements(CalculableElement::decrement);
     }
 
     private int calculateOperationOnChildElements(ToIntFunction<CalculableElement> mapper) {
@@ -45,9 +47,7 @@ public class Node implements CalculableElement {
     }
 
     public void remove(CalculableElement element) {
-        this.childElements.removeIf(v -> {
-            return v.equals(element);
-        });
+        this.childElements.removeIf(v -> v.equals(element));
     }
 
     public int getValue() {
