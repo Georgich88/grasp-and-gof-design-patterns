@@ -1,6 +1,6 @@
 /**
  * CalculatorSoapStub.java
- *
+ * <p>
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
@@ -13,14 +13,14 @@ public class CalculatorSoapStub extends org.apache.axis.client.Stub implements C
     private java.util.Vector cachedSerFactories = new java.util.Vector();
     private java.util.Vector cachedDeserFactories = new java.util.Vector();
 
-    static org.apache.axis.description.OperationDesc [] _operations;
+    static org.apache.axis.description.OperationDesc[] _operations;
 
     static {
         _operations = new org.apache.axis.description.OperationDesc[4];
         _initOperationDesc1();
     }
 
-    private static void _initOperationDesc1(){
+    private static void _initOperationDesc1() {
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
@@ -78,12 +78,12 @@ public class CalculatorSoapStub extends org.apache.axis.client.Stub implements C
     }
 
     public CalculatorSoapStub() throws org.apache.axis.AxisFault {
-         this(null);
+        this(null);
     }
 
     public CalculatorSoapStub(java.net.URL endpointURL, javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
-         this(service);
-         super.cachedEndpoint = endpointURL;
+        this(service);
+        super.cachedEndpoint = endpointURL;
     }
 
     public CalculatorSoapStub(javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
@@ -92,7 +92,7 @@ public class CalculatorSoapStub extends org.apache.axis.client.Stub implements C
         } else {
             super.service = service;
         }
-        ((org.apache.axis.client.Service)super.service).setTypeMappingVersion("1.2");
+        ((org.apache.axis.client.Service) super.service).setTypeMappingVersion("1.2");
     }
 
     protected org.apache.axis.client.Call createCall() throws java.rmi.RemoteException {
@@ -122,8 +122,7 @@ public class CalculatorSoapStub extends org.apache.axis.client.Stub implements C
                 _call.setProperty(key, super.cachedProperties.get(key));
             }
             return _call;
-        }
-        catch (Throwable _t) {
+        } catch (Throwable _t) {
             throw new org.apache.axis.AxisFault("Failure trying to get the Call object", _t);
         }
     }
@@ -144,22 +143,22 @@ public class CalculatorSoapStub extends org.apache.axis.client.Stub implements C
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        Object _resp = _call.invoke(new Object[] {new Integer(intA), new Integer(intB)});
+        try {
+            Object _resp = _call.invoke(new Object[]{new Integer(intA), new Integer(intB)});
 
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return ((Integer) _resp).intValue();
-            } catch (Exception _exception) {
-                return ((Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+            if (_resp instanceof java.rmi.RemoteException) {
+                throw (java.rmi.RemoteException) _resp;
+            } else {
+                extractAttachments(_call);
+                try {
+                    return ((Integer) _resp).intValue();
+                } catch (Exception _exception) {
+                    return ((Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+                }
             }
+        } catch (org.apache.axis.AxisFault axisFaultException) {
+            throw axisFaultException;
         }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
     }
 
     public int subtract(int intA, int intB) throws java.rmi.RemoteException {
@@ -178,22 +177,22 @@ public class CalculatorSoapStub extends org.apache.axis.client.Stub implements C
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        Object _resp = _call.invoke(new Object[] {new Integer(intA), new Integer(intB)});
+        try {
+            Object _resp = _call.invoke(new Object[]{new Integer(intA), new Integer(intB)});
 
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return ((Integer) _resp).intValue();
-            } catch (Exception _exception) {
-                return ((Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+            if (_resp instanceof java.rmi.RemoteException) {
+                throw (java.rmi.RemoteException) _resp;
+            } else {
+                extractAttachments(_call);
+                try {
+                    return ((Integer) _resp).intValue();
+                } catch (Exception _exception) {
+                    return ((Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+                }
             }
+        } catch (org.apache.axis.AxisFault axisFaultException) {
+            throw axisFaultException;
         }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
     }
 
     public int multiply(int intA, int intB) throws java.rmi.RemoteException {
@@ -212,22 +211,22 @@ public class CalculatorSoapStub extends org.apache.axis.client.Stub implements C
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        Object _resp = _call.invoke(new Object[] {new Integer(intA), new Integer(intB)});
+        try {
+            Object _resp = _call.invoke(new Object[]{new Integer(intA), new Integer(intB)});
 
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return ((Integer) _resp).intValue();
-            } catch (Exception _exception) {
-                return ((Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+            if (_resp instanceof java.rmi.RemoteException) {
+                throw (java.rmi.RemoteException) _resp;
+            } else {
+                extractAttachments(_call);
+                try {
+                    return ((Integer) _resp).intValue();
+                } catch (Exception _exception) {
+                    return ((Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+                }
             }
+        } catch (org.apache.axis.AxisFault axisFaultException) {
+            throw axisFaultException;
         }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
     }
 
     public int divide(int intA, int intB) throws java.rmi.RemoteException {
@@ -246,22 +245,22 @@ public class CalculatorSoapStub extends org.apache.axis.client.Stub implements C
 
         setRequestHeaders(_call);
         setAttachments(_call);
- try {        Object _resp = _call.invoke(new Object[] {new Integer(intA), new Integer(intB)});
+        try {
+            Object _resp = _call.invoke(new Object[]{new Integer(intA), new Integer(intB)});
 
-        if (_resp instanceof java.rmi.RemoteException) {
-            throw (java.rmi.RemoteException)_resp;
-        }
-        else {
-            extractAttachments(_call);
-            try {
-                return ((Integer) _resp).intValue();
-            } catch (Exception _exception) {
-                return ((Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+            if (_resp instanceof java.rmi.RemoteException) {
+                throw (java.rmi.RemoteException) _resp;
+            } else {
+                extractAttachments(_call);
+                try {
+                    return ((Integer) _resp).intValue();
+                } catch (Exception _exception) {
+                    return ((Integer) org.apache.axis.utils.JavaUtils.convert(_resp, int.class)).intValue();
+                }
             }
+        } catch (org.apache.axis.AxisFault axisFaultException) {
+            throw axisFaultException;
         }
-  } catch (org.apache.axis.AxisFault axisFaultException) {
-  throw axisFaultException;
-}
     }
 
 }

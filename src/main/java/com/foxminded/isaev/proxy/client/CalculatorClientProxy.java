@@ -57,19 +57,19 @@ public class CalculatorClientProxy implements CalculatorClient {
         return divideOperationCache.get(parameters);
     }
 
-    public boolean isAddParameterCached(int a, int b){
-        return addOperationCache.containsKey(OperationParameters.of(a,b));
+    public boolean isAddParameterCached(int a, int b) {
+        return addOperationCache.containsKey(OperationParameters.of(a, b));
     }
 
-    public boolean isSubtractParameterCached(int a, int b){
-        return subtractOperationCache.containsKey(OperationParameters.of(a,b));
+    public boolean isSubtractParameterCached(int a, int b) {
+        return subtractOperationCache.containsKey(OperationParameters.of(a, b));
     }
 
-    public boolean isMultiplyParameterCached(int a, int b){
-        return multiplyOperationCache.containsKey(OperationParameters.of(a,b));
+    public boolean isMultiplyParameterCached(int a, int b) {
+        return multiplyOperationCache.containsKey(OperationParameters.of(a, b));
     }
 
-    public boolean isDivideParameterCached(int a, int b){
-        return divideOperationCache.containsKey(OperationParameters.of(a,b));
+    public boolean isDivideParameterCached(int a, int b) {
+        return divideOperationCache.containsKey(OperationParameters.of(a, b));
     }
 }
