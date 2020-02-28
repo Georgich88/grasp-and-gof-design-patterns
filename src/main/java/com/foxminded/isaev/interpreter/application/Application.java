@@ -1,7 +1,12 @@
 package com.foxminded.isaev.interpreter.application;
 
+<<<<<<< HEAD
 import com.foxminded.isaev.interpreter.kitchen.ChefInvoker;
 import com.foxminded.isaev.interpreter.kitchen.InterpreterCookingPizzaException;
+=======
+import com.foxminded.isaev.interpreter.kitchen.*;
+import com.foxminded.isaev.interpreter.pizza.Pizza;
+>>>>>>> 61f2db07d221c96a03294357a4bf13c658ad4141
 
 public class Application {
 
