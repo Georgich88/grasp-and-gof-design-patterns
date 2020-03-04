@@ -4,12 +4,12 @@ import com.foxminded.isaev.observer.states.Message;
 
 import java.util.StringJoiner;
 
-public class AirportObserver implements Observer {
+public class RoadServiceObserver implements Observer {
 
     private String name;
-    private static final int MINIMUM_WARNING_LEVEL = 5;
+    private static final int MINIMUM_WARNING_LEVEL = 3;
 
-    public AirportObserver(String name) {
+    public RoadServiceObserver(String name) {
         this.name = name;
     }
 
@@ -29,7 +29,7 @@ public class AirportObserver implements Observer {
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", AirportObserver.class.getSimpleName() + "[", "]")
+        return new StringJoiner(", ", RoadServiceObserver.class.getSimpleName() + "[", "]")
                 .add("name='" + name + "'")
                 .toString();
     }

@@ -1,7 +1,11 @@
-package com.foxminded.isaev.observer.services;
+package com.foxminded.isaev.observer.subscribers;
+
+import com.foxminded.isaev.observer.states.Message;
 
 public interface Observer {
 
-    void update();
+    void update(Message message);
+
+    int getMinimumWarningLevel();
 
 }
